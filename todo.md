@@ -1,4 +1,3 @@
-To achieve this, you need to follow several steps to set up your Azure environment, create the necessary resources, and configure them correctly. Below, I will walk you through the complete process, step-by-step, of creating two Azure Virtual Machines (VMs)—one in the **Public Subnet** for your IIS-hosted web application and another in the **Private Subnet** for your database—and configuring them to communicate securely.
 
 ### Overview of the Solution:
 - **Public Subnet VM**: Hosts the IIS web application for **myinsider** and **upsi** projects.
