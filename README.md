@@ -15,7 +15,7 @@ Action->Allow
 Priority->100
 Name->HTTP_port
 ```
-
+- Firstly, we have to change the appsettings.production.json [Backend] and appconfig.production [Frontend] to take the http://20.204.162.91:8080/ instead of localhost:8080 for upsi inside the VM created.
 - Initially i kept destination port as 80 and i was able to access the myinsider application with http://20.204.162.91:8081/ in my outside the VM environment computer.[8081 is the port where i deployed myinsider in VM IIS ]
 - But was unable to access the upsi application with http://20.204.162.91:8080/ in my outside the VM environment computer. [8080 is the port where i deployed upsi in VM IIS ]
   ```bash
@@ -68,4 +68,4 @@ polyfills.03c2a556ba39e09e.js:1
 it	@	polyfills.03c2a556ba39e09e.js:1
 ```
 
-- To resolve this i changed the azure nettwork security inbound rule port to 8080
+- To resolve this i changed the nettwork azure VM -> security group -> inbound rule port from 80 -> 8080 [Name: HTTP_port]
