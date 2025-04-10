@@ -12,7 +12,7 @@ Service->Custom
 Destination port ranges->8081
 Protocol->Any
 Action->Allow
-Priority->100
+Priority->310
 Name->HTTP_port
 ```
 ```markdown
@@ -23,7 +23,7 @@ Service->Custom
 Destination port ranges->8080
 Protocol->Any
 Action->Allow
-Priority->310
+Priority->100
 Name->AllowAnyCustom8081Inbound
 ```
 - Firstly, we have to change the appsettings.production.json [Backend] and appconfig.production [Frontend] to take the http://20.204.162.91:8080/ instead of localhost:8080 for upsi inside the VM created.
