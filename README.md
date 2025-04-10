@@ -9,11 +9,22 @@ Protocol->Any
 Source port ranges->*
 Destination->Any
 Service->Custom
-Destination port ranges->8080
+Destination port ranges->8081
 Protocol->Any
 Action->Allow
 Priority->100
 Name->HTTP_port
+```
+```markdown
+Protocol->Any
+Source port ranges->*
+Destination->Any
+Service->Custom
+Destination port ranges->8080
+Protocol->Any
+Action->Allow
+Priority->310
+Name->AllowAnyCustom8081Inbound
 ```
 - Firstly, we have to change the appsettings.production.json [Backend] and appconfig.production [Frontend] to take the http://20.204.162.91:8080/ instead of localhost:8080 for upsi inside the VM created.
 - Initially i kept destination port as 80 and i was able to access the myinsider application with http://20.204.162.91:8081/ in my outside the VM environment computer.[8081 is the port where i deployed myinsider in VM IIS ]
